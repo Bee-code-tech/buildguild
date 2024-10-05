@@ -3,6 +3,7 @@ import React from 'react'
 import { IoIosArrowDown } from 'react-icons/io'
 import { LuArrowDownUp } from 'react-icons/lu'
 import Eth from '../assets/eth.png'
+import { MdOutlineFileUpload } from 'react-icons/md'
 
 const TransactionBox = () => {
   return (
@@ -69,7 +70,7 @@ const TransactionBox = () => {
             </p>
             </div>
             <div className="h-[67%] flex flex-col items-center justify-center text-white/60">
-                <h1 className='text-6xl'>0</h1>
+                <h1 className='text-9xl'>0</h1>
                 <div className='flex items-center justify-center mt-2'>
                     <p className="text-lg">
                     $0.00 USD 
@@ -90,7 +91,28 @@ const TransactionBox = () => {
           </div>
 
           {/* Upload box  */}
-          <div className="w-full bg-blue-300 h-[130px] rounded-2xl mt-2 mb-4"> 
+          <div className="w-full auto rounded-2xl my-3 flex flex-col overflow-hidden border border-[#496AA7]/30">
+            <div className="py-3  border-b border-[#496AA7]/20 px-4 text-white/60 flex items-center justify-between">
+            <p className="text-lg">
+              To
+            </p>
+            <div className="rounded-full px-3 py-2 flex items-center justify-center gap-2 bg-[#496AA7]/30 ">
+                <MdOutlineFileUpload />
+                <p className='text-md text-white/40'>Upload</p>
+            </div>
+            </div>
+
+            <div className="flex flex-col px-4 my-3">
+                <p className="text-white/40">contract address</p>
+                <p className="text-white/40">contract address</p>
+            </div>
+
+          </div>
+
+          {/* Valid Address container  */}
+
+          <div className="">
+            
           </div>
 
           {/* Button  */}
