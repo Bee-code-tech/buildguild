@@ -1,4 +1,8 @@
+import Image from 'next/image'
 import React from 'react'
+import { IoIosArrowDown } from 'react-icons/io'
+import { LuArrowDownUp } from 'react-icons/lu'
+import Eth from '../assets/eth.png'
 
 const TransactionBox = () => {
   return (
@@ -18,20 +22,70 @@ const TransactionBox = () => {
         </div>
 
         {/* Token Contract container  */}
-        <div className="w-full h-56 rounded-2xl mt-4 border overflow-hidden  border-[#496AA733]/20 text-white mb-3">
-            <div className="w-full p-3 bg-[#496AA7]/20 border-b border-[#496AA7]/20">
-                <h1 className='text-lg'>Token Contract Address</h1>
-            </div>
-                {/* input  */}
-         <div className="border-b border-[#496AA7]/20">
+        <div className="w-full h-auto rounded-2xl mt-4 border overflow-hidden  border-[#496AA733]/20 text-white mb-3">
+        <div className="w-full p-3 bg-[#496AA7]/5 border-b border-[#496AA7]/30">
+            <h1 className='text-lg'>Token Contract Address</h1>
+        </div>
+
+        {/* input Box */}
+         <div className="border-b border-[#496AA7]/30 bg-[#496AA7]/5">
            <input type="text" className="w-full px-4 py-2 mt-2 rounded-full border-none focus:outline-none bg-transparent " placeholder="paste token address" />
-                </div>
+        </div>
+
+        {/* Token box  */}
+        <div className="flex items-center w-full justify-evenly my-3">
+            <div className="flex flex-col items-center justify-center ">
+                <p>-</p>
+                <span > Token </span>
+            </div>
+            <div className="flex flex-col items-center justify-center ">
+                <p>0</p>
+                <span>Balance</span>
+            </div>
+            <div className="flex flex-col items-center justify-center ">
+                <p>0</p>
+                <span>Allowance</span>
+            </div>
+        </div>
+
+        {/* Allowance input  */}
+        <div className="w-full flex items-center justify-center border-t border-[#496AA7]/20">
+            <div className="w-[75%]">
+                <input type="text " placeholder='Enter Allowance' className='px-4 bg-transparent w-full h-full py-4 border-none focus:outline-none ' />
+            </div>
+            <button className="w-[25%] py-4 bg-[#496AA7] text-white">
+                Approve
+            </button>
+        </div>
                
  
         </div>
           
           {/* Transaction container  */}
-          <div className="w-full bg-yellow-300 h-[342px] rounded-2xl mt-2">
+          <div className="w-full h-[320px] rounded-2xl my-3 flex flex-col overflow-hidden border border-[#496AA7]/30">
+            <div className="h-[15%]  border-b border-[#496AA7]/20 px-4 text-white/60 flex items-center">
+            <p className="text-lg">
+              You are sending
+            </p>
+            </div>
+            <div className="h-[67%] flex flex-col items-center justify-center text-white/60">
+                <h1 className='text-6xl'>0</h1>
+                <div className='flex items-center justify-center mt-2'>
+                    <p className="text-lg">
+                    $0.00 USD 
+                    </p>
+                    <LuArrowDownUp className='ml-2 text-lg' />
+                </div>
+            </div>
+            <div className="h-[17%]  border-t border-[#496AA7]/20 flex items-center justify-between px-4 text-white/70">
+            <div className="flex items-center justify-center">
+                <Image src={Eth} alt='' className='w-8' />
+                <p className="text-lg ml-2">
+                    ETH
+                </p>
+            </div>
+            <IoIosArrowDown className='text-2xl' />
+            </div>
 
           </div>
 
