@@ -5,7 +5,7 @@ import TransactionBox from "./components/TransactionBox";
 export default function Home() {
   return (
     <>
-    <div className="bg-[#101522] min-h-screen ">
+    <div className="bg-[#101522] min-h-screen overflow-x-hidden">
       {/* Eth value button  */}
       <span className="px-4 py-2 rounded-full border absolute text-[#496AA7] bottom-20 right-32 border-[#496AA733]/20">
       1 ETH= ($2,453.15)

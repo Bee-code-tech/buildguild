@@ -8,17 +8,17 @@ import { CiTrash } from 'react-icons/ci'
 
 const TransactionBox = () => {
   return (
-    <div className='max-w-[600px] h-auto mx-auto  backdrop-blur-lg rounded-2xl mt-12 overflow-hidden '>
+    <div className='max-w-[400px] px-3 lg:max-w-[600px] h-auto mx-auto  backdrop-blur-lg rounded-2xl mt-12 overflow-hidden '>
 
         {/* Tabs for transaction  */}
         <div className="w-full  h-16 flex items-center justify-between ">
             <div className="flex gap-2  text-white">
-                <button className='px-4  rounded-full py-2  bg-[#496AA7]/20 text-[#496AA7] '>Equal Splits</button>
-                <button className='px-4  rounded-full py-2 text-[#496AA7]'>Unequal Splits</button>
+                <button className='p-1 lg:px-4  rounded-full lg:py-2  bg-[#496AA7]/20 text-[#496AA7] text-[12px] lg:text-lg'>Equal Splits</button>
+                <button className='p-1 lg:px-4  rounded-full lg:py-2 text-[#496AA7] text-[12px] lg:text-lg'>Unequal Splits</button>
             </div>
             <div className="flex gap-1 bg-[#496AA7]/20 p-1 rounded-full">
-                <button className='px-4 bg-[#496AA7] text-white rounded-full py-1'>Split Eth</button>
-                <button className='px-4 text-white/50 rounded-full py-1'>Split Tokens </button>
+                <button className='p-2 lg:px-4 bg-[#496AA7] text-white rounded-full py-1 text-[12px] lg:text-lg'>Split Eth</button>
+                <button className='p-2 lg:px-4 text-white/50 rounded-full py-1 text-[12px] lg:text-lg'>Split Tokens </button>
             </div>
 
         </div>
@@ -124,7 +124,7 @@ const TransactionBox = () => {
                      <LuCopy  className='text-white/40'/>
                 </div>
                 <div className="flex gap-1">
-                   <CiTrash />
+                   <CiTrash className='text-white/60'/>
                 </div>
             </div>
             </div>
