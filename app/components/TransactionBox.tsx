@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
-import { IoIosArrowDown } from 'react-icons/io'
-import { LuArrowDownUp } from 'react-icons/lu'
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
+import { LuArrowDownUp, LuCopy } from 'react-icons/lu'
 import Eth from '../assets/eth.png'
 import { MdOutlineFileUpload } from 'react-icons/md'
+import { CiTrash } from 'react-icons/ci'
 
 const TransactionBox = () => {
   return (
@@ -111,8 +112,23 @@ const TransactionBox = () => {
 
           {/* Valid Address container  */}
 
-          <div className="">
-            
+          <div className="p-3 border-[#496AA7]/30 rounded-2xl mt-3">
+
+            <h1 className='text-white/40 text-lg border-b border-[#496AA7]/30 pb-3'>Valid addresses (0) </h1>
+
+            {/* contract list  */}
+            <div className="my-3">
+                <div className=" rounded-full border-[#496AA7]/20 border w-full flex items-center justify-between py-2 px-4">
+                <div className="flex items-center gap-1">
+                    <p className="text-white/40">contract addresskjkjbkjbjb</p>
+                     <LuCopy  className='text-white/40'/>
+                </div>
+                <div className="flex gap-1">
+                   <CiTrash />
+                </div>
+            </div>
+            </div>
+
           </div>
 
           {/* Button  */}
